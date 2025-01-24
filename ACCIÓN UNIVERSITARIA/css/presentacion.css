@@ -1,25 +1,19 @@
-/* Estilo para la presentación */
+/* ======== PRESENTACIÓN ======== */
 .presentacion {
-    width: auto; /* Asegura que la sección ocupe todo el ancho */
-    height: auto;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
     text-align: center;
-    padding: 40px 20px;
-    display: flex; /* Usa Flexbox para organizar los elementos */
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-}
-
-.presentacion img {
-    max-width: 40%;
-    height: 300px;
-    margin-bottom: 20px;
-}
-
-.presentacion p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     line-height: 1.6;
-    height: auto;
-    width: auto;
-    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.eslogan {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00509E;
+    margin-top: 15px;
+}
