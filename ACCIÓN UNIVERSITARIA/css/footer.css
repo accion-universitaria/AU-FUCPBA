@@ -1,6 +1,6 @@
 /* ======== PIE DE PÁGINA ======== */
 footer {
-    background: #003366;
+    background: #2b633d;
     color: white;
     padding: 20px;
     text-align: center;
@@ -34,5 +34,5 @@ footer {
 }
 
 .instagram-link:hover {
-    color: #FFD700;
+    color: #ffffff;
 }
