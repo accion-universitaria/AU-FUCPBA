@@ -1,0 +1,38 @@
+/* ======== PIE DE PÁGINA ======== */
+footer {
+    background: #2b633d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instagram-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.instagram-logo {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.instagram-link:hover {
+    color: #ffffff;
+}
