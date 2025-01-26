@@ -1,0 +1,19 @@
+/* ======== MENÚ DE NAVEGACIÓN ======== */
+.menu {
+    display: flex;
+    justify-content: center;
+    background: #00509E; /* Azul intermedio */
+    padding: 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700; /* Amarillo dorado */
+}
