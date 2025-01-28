@@ -73,6 +73,56 @@
                 <h3 style="color:#000000">"Libertad para pensar...Acción para cambiar"</h3>  
          </div>
     </div>
+</div>
+</div>
+
+<footer>
+    <img class="footer-logo" src="../IMAGENES/Imagen_de_WhatsApp_2024-12-07_a_las_00.06.05_0b13824c-removebg-preview (1).png" alt="Logo de Acción Universitaria" title="Acción Universitaria"> 
+    <div class="footer-content">
+        <a href="https://www.instagram.com/accion.universitaria" class="instagram-link" target="_blank">
+            <img src="../IMAGENES/instagram-icon-logo-symbol-free-png.webp" Síguenos en Instagram" title="Síguenos en Instagram" class="instagram-logo">
+            Visítanos en Instagram
+        </a>
+        <b class="eslogan">"Libertad para pensar, Acción para cambiar"</b>
+    </div>
+</footer>
+    <!--ORDENAMIENTO DECENDENTE (del mas nuevo al mas antiguo) de cada noticia segun su fecha -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener todos los artículos
+            const articulos = document.querySelectorAll('.articulo');
+            
+            // Convertir NodeList a un arreglo para poder ordenarlo
+            const articulosArray = Array.from(articulos);
+    
+            // Función para convertir las fechas en formato 'DD/MM/YYYY' a un objeto Date
+            function convertirFecha(fechaStr) {
+                const partesFecha = fechaStr.split('/');
+                return new Date(partesFecha[2], partesFecha[1] - 1, partesFecha[0]); // Año, mes (0-indexed), día
+            }
+    
+            // Ordenar los artículos por fecha de forma descendente (de más reciente a más antigua)
+            articulosArray.sort(function(a, b) {
+                const fechaA = a.querySelector('.eslogan h3').textContent.trim();
+                const fechaB = b.querySelector('.eslogan h3').textContent.trim();
+                
+                const dateA = convertirFecha(fechaA);
+                const dateB = convertirFecha(fechaB);
+                
+                return dateB - dateA;  // Orden descendente
+            });
+    
+            // Reinsertar los artículos ordenados en el contenedor
+            const contenedor = document.querySelector('.contenedor-articulos');
+            articulosArray.forEach(function(articulo) {
+                contenedor.appendChild(articulo); // Mueve cada artículo al nuevo orden
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
     <!--TERMINA ARTICULO
     <div class="contenedor-articulos">
                Artículo 5 
@@ -143,52 +193,4 @@
                 <p>Este es el flyer publicitario para las elecciones estudiantiles 2024.</p>
             </div>
         </div><!--TERMINA ARTICULO-->
-    </div>
-</div>
-
-<footer>
-    <img class="footer-logo" src="../IMAGENES/Imagen_de_WhatsApp_2024-12-07_a_las_00.06.05_0b13824c-removebg-preview (1).png" alt="Logo de Acción Universitaria" title="Acción Universitaria"> 
-    <div class="footer-content">
-        <a href="https://www.instagram.com/accion.universitaria" class="instagram-link" target="_blank">
-            <img src="../IMAGENES/instagram-icon-logo-symbol-free-png.webp" Síguenos en Instagram" title="Síguenos en Instagram" class="instagram-logo">
-            Visítanos en Instagram
-        </a>
-        <b class="eslogan">"Libertad para pensar, Acción para cambiar"</b>
-    </div>
-</footer>
-    <!--ORDENAMIENTO DECENDENTE (del mas nuevo al mas antiguo) de cada noticia segun su fecha -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Obtener todos los artículos
-            const articulos = document.querySelectorAll('.articulo');
-            
-            // Convertir NodeList a un arreglo para poder ordenarlo
-            const articulosArray = Array.from(articulos);
-    
-            // Función para convertir las fechas en formato 'DD/MM/YYYY' a un objeto Date
-            function convertirFecha(fechaStr) {
-                const partesFecha = fechaStr.split('/');
-                return new Date(partesFecha[2], partesFecha[1] - 1, partesFecha[0]); // Año, mes (0-indexed), día
-            }
-    
-            // Ordenar los artículos por fecha de forma descendente (de más reciente a más antigua)
-            articulosArray.sort(function(a, b) {
-                const fechaA = a.querySelector('.eslogan h3').textContent.trim();
-                const fechaB = b.querySelector('.eslogan h3').textContent.trim();
-                
-                const dateA = convertirFecha(fechaA);
-                const dateB = convertirFecha(fechaB);
-                
-                return dateB - dateA;  // Orden descendente
-            });
-    
-            // Reinsertar los artículos ordenados en el contenedor
-            const contenedor = document.querySelector('.contenedor-articulos');
-            articulosArray.forEach(function(articulo) {
-                contenedor.appendChild(articulo); // Mueve cada artículo al nuevo orden
-            });
-        });
-    </script>
-    
-</body>
-</html>
+ 
