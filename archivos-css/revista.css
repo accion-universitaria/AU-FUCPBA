@@ -67,3 +67,8 @@ p {
 color: #efe102;
 
 }
+a {
+    text-decoration: none;  /* Elimina el subrayado */
+    color: inherit;         /* Hereda el color del texto o imagen */
+}
+
