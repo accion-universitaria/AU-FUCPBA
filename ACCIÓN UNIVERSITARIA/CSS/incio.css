@@ -1,0 +1,82 @@
+/* GENERAL */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* TÍTULO */
+.titulo {
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.titulo::before  { 
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
+    animation: brilloRapido 2s infinite;
+} 
+
+
+/* ESLOGAN */
+.eslogan {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.eslogan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: brillo 1s infinite;
+}
+
+/* CONTENIDO PRINCIPAL */
+.texto {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #000;
+    background-color: #87c143;
+    border-radius: 10px;
+}
+
+
+/* ANIMACIONES */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes brilloRapido {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 120%;
+    }
+}

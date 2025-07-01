@@ -1,0 +1,17 @@
+.formulario{
+width:540px; 
+height:724px;
+align-items: center; 
+direction: center;
+border: #17612e solid 10px;
+}
+.main{
+    background-color: #87c143;
+    max-width: auto; /* Ancho fijo */
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+}
